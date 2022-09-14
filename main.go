@@ -54,7 +54,20 @@ func main() {
 	for _, line := range data {
 		addresses = append(addresses, line[0])
 	}
+	publicKey := os.Getenv("FLOATILLA_PUBLIC_KEY")
+	if publicKey == "" {
+		panic("Please expose FLOATILLA_PUBLIC_KEY")
+	}
 	o := Overflow(WithNetwork("mainnet"), WithPrintResults())
+	account, err := o.GetAccount("admin")
+	if len(account.Keys) == 1 {
+		o.Tx("adminAddKeys",
+			WithSigner("admin"),
+			WithArg("number", 100),
+			WithArg("key", publicKey),
+		)
+	}
+
 	if host == "" {
 		host = o.Address("admin")
 	}

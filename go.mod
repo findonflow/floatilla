@@ -2,7 +2,12 @@ module github.com/findonflow/floatilla
 
 go 1.19
 
-require github.com/bjartek/overflow v1.0.0-rc99995
+require (
+	github.com/bjartek/overflow v1.0.0-rc99995
+	github.com/pkg/errors v0.9.1
+	github.com/samber/lo v1.28.0
+	go.mitsakis.org/workerpool v0.0.0-20220708032925-ee5b283b69ca
+)
 
 require (
 	cloud.google.com/go v0.100.2 // indirect
@@ -92,7 +97,6 @@ require (
 	github.com/onflow/sdks v0.4.4 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.2 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/psiemens/sconfig v0.1.0 // indirect
 	github.com/rivo/uniseg v0.2.1-0.20211004051800-57c86be7915a // indirect
