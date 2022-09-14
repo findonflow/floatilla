@@ -1,0 +1,1078 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "contracts": {
+    "NonFungibleToken": {
+      "source": "./contracts/core-contracts/NonFungibleToken.cdc",
+      "aliases": {
+        "testnet": "0x631e88ae7f1d7c20",
+        "mainnet": "0x1d7e57aa55817448"
+      }
+    },
+    "MetadataViews": {
+      "source": "./contracts/core-contracts/MetadataViews.cdc",
+      "aliases": {
+        "mainnet": "0x1d7e57aa55817448",
+        "testnet": "0x631e88ae7f1d7c20"
+      }
+    },
+		"GrantedAccountAccess": {
+      "source": "./contracts/GrantedAccountAccess.cdc",
+      "aliases": {
+        "mainnet": "0x2d4c3caffbeab845",
+        "testnet": "0x0afe396ebc8eee65"
+      }
+    },
+    "FLOAT": {
+      "source": "./contracts/FLOAT.cdc",
+      "aliases": {
+        "mainnet": "0x2d4c3caffbeab845",
+        "testnet": "0x0afe396ebc8eee65"
+      }
+    },
+    "FlowStorageFees": {
+      "source": "./contracts/core-contracts/FlowStorageFees.cdc",
+      "aliases": {
+        "emulator": "0xf8d6e0586b0a20c7",
+        "testnet": "0x8c5303eaa26202d6",
+        "mainnet": "0xe467b9dd11fa00df"
+      }
+   }
+	},
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "573b0db3fe91458e2aceefb8318d6daf3aee2af986a850cbf27a8ffff8a4ef9f"
+    },
+		"mainnet-admin": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla1": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 1,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla2": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 2,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla3": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 3,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla4": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 4,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla5": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 5,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla6": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 6,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla7": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 7,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla8": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 8,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla9": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 9,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla10": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 10,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla11": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 11,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla12": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 12,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla13": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 13,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla14": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 14,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla15": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 15,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla16": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 16,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla17": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 17,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla18": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 18,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla19": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 19,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla20": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 20,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla21": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 21,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla22": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 22,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla23": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 23,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla24": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 24,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla25": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 25,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla26": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 26,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla27": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 27,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla28": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 28,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla29": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 29,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla30": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 30,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla31": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 31,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla32": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 32,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla33": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 33,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla34": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 34,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla35": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 35,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla36": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 36,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla37": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 37,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla38": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 38,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla39": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 39,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla40": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 40,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla41": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 41,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla42": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 42,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla43": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 43,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla44": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 44,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla45": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 45,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla46": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 46,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla47": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 47,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla48": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 48,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla49": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 49,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla50": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 50,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla51": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 51,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla52": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 52,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla53": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 53,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla54": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 54,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla55": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 55,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla56": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 56,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla57": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 57,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla58": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 58,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla59": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 59,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla60": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 60,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla61": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 61,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla62": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 62,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla63": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 63,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla64": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 64,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla65": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 65,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla66": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 66,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla67": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 67,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla68": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 68,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla69": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 69,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla70": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 70,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla71": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 71,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla72": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 72,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla73": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 73,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla74": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 74,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla75": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 75,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla76": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 76,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla77": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 77,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla78": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 78,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla79": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 79,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla80": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 80,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla81": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 81,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla82": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 82,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla83": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 83,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla84": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 84,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla85": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 85,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla86": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 86,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla87": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 87,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla88": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 88,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla89": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 89,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla90": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 90,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla91": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 91,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla92": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 92,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla93": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 93,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla94": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 94,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla95": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 95,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla96": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 96,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla97": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 97,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla98": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 98,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla99": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 99,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla100": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 100,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		},
+		"mainnet-floatilla101": {
+			"address": "${FLOATILLA_ADDRESS}",
+			"key": {
+				"type": "hex",
+				"index": 101,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "${FLOATILLA_PRIVATE_KEY}"
+			}
+		}
+	},
+  "deployments": { }
+}
