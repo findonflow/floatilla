@@ -72,6 +72,7 @@ var cmd = &cobra.Command{
 			overflow.WithNetwork("mainnet"),
 			overflow.WithBasePath(""),
 			overflow.WithLogNone(),
+			overflow.WithReturnErrors(),
 			overflow.WithEmbedFS(path),
 		)
 
@@ -112,7 +113,7 @@ var cmd = &cobra.Command{
 				fmt.Printf("worker=%03d failed with error %v\n", workerID, result.Err)
 			} else {
 				ids := result.GetIdsFromEvent("Transferred", "id")
-				fmt.Printf("worker=%03d awared %03d floats\n", workerID, len(ids))
+				fmt.Printf("worker=%03d awared %03d floats computation:%03d \n", workerID, len(ids), result.ComputationUsed)
 			}
 
 			return nil

@@ -46,10 +46,9 @@ transaction(forHost: Address, eventId: UInt64, recipients: [String]) {
 		self.FLOATEvent = self.FLOATEvents.borrowEventRef(eventId: eventId) ?? panic("This event does not exist.")
 		self.RecipientCollections = []
 		for address in recipients {
-			let recipient = FIND.resolve(address)
-			if recipient != nil {
+			if  let recipient = FIND.resolve(address) {
 				if FlowStorageFees.defaultTokenAvailableBalance(recipient) > 0.003 {
-					if let recipientCollection = getAccount(recicient).getCapability(FLOAT.FLOATCollectionPublicPath).borrow<&FLOAT.Collection{NonFungibleToken.CollectionPublic}>() {
+					if let recipientCollection = getAccount(recipient).getCapability(FLOAT.FLOATCollectionPublicPath).borrow<&FLOAT.Collection{NonFungibleToken.CollectionPublic}>() {
 						self.RecipientCollections.append(recipientCollection)
 					}
 				}
