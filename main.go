@@ -71,7 +71,7 @@ var cmd = &cobra.Command{
 		o := overflow.Overflow(
 			overflow.WithNetwork("mainnet"),
 			overflow.WithBasePath(""),
-			overflow.WithPrintResults(),
+			overflow.WithLogNone(),
 			overflow.WithEmbedFS(path),
 		)
 
@@ -86,8 +86,6 @@ var cmd = &cobra.Command{
 		//should we configure this with a key somehow?
 		if len(account.Keys) == 1 {
 			fmt.Println("You do not have minter keys so we add them for you")
-			fmt.Println(publicKey)
-			fmt.Scanln()
 			result := o.Tx("adminAddKeys",
 				overflow.WithSigner("admin"),
 				overflow.WithArg("number", 100),
@@ -96,18 +94,26 @@ var cmd = &cobra.Command{
 			if result.Err != nil {
 				return result.Err
 			}
+
+			fmt.Printf("Minter keys added in transactions %s\n", result.Id)
 		}
 
 		batches := lo.Chunk(addresses, conf.BatchSize)
 		p, err := workerpool.NewPoolSimple(conf.Workers, func(job workerpool.Job[[]string], workerID int) error {
 			addresses := job.Payload
-			fmt.Printf("worker=%03d awarding %03d floats", workerID, len(addresses))
-			o.Tx("award_manually_many",
+			fmt.Printf("worker=%03d awarding %03d floats\n", workerID, len(addresses))
+			result := o.Tx("award_manually_many",
 				overflow.WithSigner(fmt.Sprintf("floatilla%d", workerID+1)),
 				overflow.WithArg("forHost", conf.Host),
 				overflow.WithArg("eventId", eventID),
-				overflow.WithAddresses("recipients", addresses...),
+				overflow.WithArg("recipients", addresses),
 			)
+			if result.Err != nil {
+				fmt.Printf("worker=%03d failed with error %v\n", workerID, result.Err)
+			} else {
+				ids := result.GetIdsFromEvent("Transferred", "id")
+				fmt.Printf("worker=%03d awared %03d floats\n", workerID, len(ids))
+			}
 
 			return nil
 		})
@@ -167,7 +173,7 @@ func readAddresses(file string) ([]string, error) {
 
 	addresses := []string{}
 	for _, line := range data {
-		addresses = append(addresses, strings.TrimSuffix(line[0], ".find"))
+		addresses = append(addresses, strings.TrimSpace(strings.TrimSuffix(line[0], ".find")))
 	}
 	return addresses, nil
 }
