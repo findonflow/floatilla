@@ -8,7 +8,6 @@ run `make build` to build a target for your env, or use one of the predefined bi
 1. Make sure you have an non-custodial account that you know the private key for
 2. export the following env vars:
  - FLOATILLA_ADDRESS
- - FLOATILLA_PUBLIC_KEY
  - FLOATILLA_PRIVATE_KEY
 3. ensure that your address either has created this float or is a shared minter
 4. check out this repo
