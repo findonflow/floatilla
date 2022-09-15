@@ -2,7 +2,7 @@
 
 A tool to batch send FLOATS to users
 
-Download a release version from https://github.com/findonflow/floatilla/releases or build locally using `make`
+To install use  `make build` or run `go install github.com/findonflow/floatilla@latest`
 
 usage `flotilla <eventId` will send floats to every users in `recipients.csv`
  
