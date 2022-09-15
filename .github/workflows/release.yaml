@@ -1,28 +1,25 @@
 # .github/workflows/release.yaml
+name: Generate release-artifacts
 
+# on events
 on:
   release:
-    types: [created]
+    types: 
+        - created
 
+# workflow tasks
 jobs:
-  releases-matrix:
-    name: Release Go Binary
+  generate:
+    name: Generate cross-platform builds
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # build and publish in parallel: linux/386, linux/amd64, linux/arm64, windows/386, windows/amd64, darwin/amd64, darwin/arm64
-        goos: [linux, windows, darwin]
-        goarch: ["386", amd64, arm64]
-        exclude:
-          - goarch: "386"
-            goos: darwin
-          - goarch: arm64
-            goos: windows
     steps:
-    - uses: actions/checkout@v3
-    - uses: wangyoucao577/go-release-action@v1.31
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        goos: ${{ matrix.goos }}
-        goarch: ${{ matrix.goarch }}
-        extra_files: flow.json transactions
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Generate build files
+        uses: thatisuday/go-cross-build@v1
+        with:
+            platforms: 'linux/amd64, darwin/amd64, windows/amd64, darwin/arm64'
+            package: ''
+            name: 'floatilla'
+            compress: 'true'
+            dest: 'dist'
