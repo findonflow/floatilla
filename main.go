@@ -113,7 +113,7 @@ var cmd = &cobra.Command{
 				fmt.Printf("worker=%03d failed with error %v\n", workerID, result.Err)
 			} else {
 				ids := result.GetIdsFromEvent("Transferred", "id")
-				fmt.Printf("worker=%03d awared %03d floats computation:%03d \n", workerID, len(ids), result.ComputationUsed)
+				fmt.Printf("worker=%03d awared %03d floats computation:%03d \n", workerID, len(ids), result.FeeGas)
 			}
 
 			return nil
