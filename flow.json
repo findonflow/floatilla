@@ -13,6 +13,13 @@
         "mainnet": "0x1d7e57aa55817448"
       }
     },
+		"FIND": {
+			"source": "./contracts/core-contracts/FIND.cdc",
+			"aliases": {
+				"mainnet": "0x097bafa4e0b48eef",
+				"testnet": "0x35717efbbce11c74"
+			}
+		},
     "MetadataViews": {
       "source": "./contracts/core-contracts/MetadataViews.cdc",
       "aliases": {

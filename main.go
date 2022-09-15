@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 
 	"github.com/bjartek/overflow"
 	"github.com/pkg/errors"
@@ -54,8 +55,6 @@ var cmd = &cobra.Command{
 		if conf.Private_Key == "" || conf.Address == "" {
 			return fmt.Errorf("You need to set FLOATILLA_ADDRESS|FLOATILLA_PRIVATE_KEY or call this binary with -k -a flags")
 		}
-		fmt.Println(eventID)
-
 		addresses, err := readAddresses(conf.File)
 		if err != nil {
 			return err
@@ -77,7 +76,8 @@ var cmd = &cobra.Command{
 		)
 
 		account, err := o.GetAccount("admin")
-		publicKey := account.Keys[0].PublicKey.String()
+		//I have no idea why this has 0x prefix but we cannot have it here
+		publicKey := strings.TrimPrefix(account.Keys[0].PublicKey.String(), "0x")
 		if conf.Host == "" {
 			host := o.Address("admin")
 			conf.Host = host
@@ -85,6 +85,9 @@ var cmd = &cobra.Command{
 
 		//should we configure this with a key somehow?
 		if len(account.Keys) == 1 {
+			fmt.Println("You do not have minter keys so we add them for you")
+			fmt.Println(publicKey)
+			fmt.Scanln()
 			result := o.Tx("adminAddKeys",
 				overflow.WithSigner("admin"),
 				overflow.WithArg("number", 100),
@@ -98,7 +101,7 @@ var cmd = &cobra.Command{
 		batches := lo.Chunk(addresses, conf.BatchSize)
 		p, err := workerpool.NewPoolSimple(conf.Workers, func(job workerpool.Job[[]string], workerID int) error {
 			addresses := job.Payload
-
+			fmt.Printf("worker=%03d awarding %03d floats", workerID, len(addresses))
 			o.Tx("award_manually_many",
 				overflow.WithSigner(fmt.Sprintf("floatilla%d", workerID+1)),
 				overflow.WithArg("forHost", conf.Host),
@@ -164,7 +167,7 @@ func readAddresses(file string) ([]string, error) {
 
 	addresses := []string{}
 	for _, line := range data {
-		addresses = append(addresses, line[0])
+		addresses = append(addresses, strings.TrimSuffix(line[0], ".find"))
 	}
 	return addresses, nil
 }
