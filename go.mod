@@ -3,9 +3,11 @@ module github.com/findonflow/floatilla
 go 1.19
 
 require (
-	github.com/bjartek/overflow v1.0.0-rc99995
+	github.com/bjartek/overflow v1.0.0-rc99997
 	github.com/pkg/errors v0.9.1
+	github.com/psiemens/sconfig v0.1.0
 	github.com/samber/lo v1.28.0
+	github.com/spf13/cobra v1.5.0
 	go.mitsakis.org/workerpool v0.0.0-20220708032925-ee5b283b69ca
 )
 
@@ -98,7 +100,6 @@ require (
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/psiemens/sconfig v0.1.0 // indirect
 	github.com/rivo/uniseg v0.2.1-0.20211004051800-57c86be7915a // indirect
 	github.com/rs/zerolog v1.28.0 // indirect
 	github.com/sanity-io/litter v1.5.5 // indirect
@@ -109,7 +110,6 @@ require (
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/afero v1.9.2 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
-	github.com/spf13/cobra v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.12.0 // indirect
