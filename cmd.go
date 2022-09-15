@@ -12,13 +12,14 @@ import (
 
 //This file is boilerplate to set up a CLI application in go using cobra/sconfig and embed to embed files into the binary
 
-//we embedd the flow.json  and the transactions we need
+// we embedd the flow.json  and the transactions we need
+//
 //go:embed transactions/award_manually_many.cdc
 //go:embed transactions/adminAddKeys.cdc
 //go:embed flow.json
 var path embed.FS
 
-//For config we use psiemens brilliant sconfig repo, IMHO a lot easier to use then plain viper/pflags
+// For config we use psiemens brilliant sconfig repo, IMHO a lot easier to use then plain viper/pflags
 type Config struct {
 	File       string `default:"recipients.csv" flag:"file,f" info:"Path to file of recipients, one address per line"`
 	BatchSize  int    `default:"100" flag:"batchSize,b" info:"How many floats to award in a single batch"`
@@ -31,7 +32,7 @@ type Config struct {
 
 var conf Config
 
-//we set up our one and only command
+// we set up our one and only command
 var cmd = &cobra.Command{
 	Use:   "floatilla",
 	Short: "Send a floatilla of floats with the given `eventId` to the recipient in `file`",
@@ -64,7 +65,7 @@ func init() {
 	}
 }
 
-//The main method simply executes the command and exits either successfully or not, note that we print errors to stderr not stdout
+// The main method simply executes the command and exits either successfully or not, note that we print errors to stderr not stdout
 func main() {
 	if err := cmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
