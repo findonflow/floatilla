@@ -1,5 +1,4 @@
 
-//Initialize a users storage slots for OneFootball
 transaction(number:Int, key: String) {
 	prepare(signer: AuthAccount) {
 
